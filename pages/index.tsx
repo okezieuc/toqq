@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
@@ -8,7 +7,10 @@ const Home: NextPage = () => {
     <div className={styles.container}>
       <Head>
         <title>Toqq</title>
-        <meta name="description" content="Making sending links from phones to PCs as easy as ABC." />
+        <meta
+          name="description"
+          content="Making sending links from phones to PCs as easy as ABC."
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -67,3 +69,9 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+export async function getStaticProps() {
+  return {
+    props: { yes: "true" },
+  };
+}
